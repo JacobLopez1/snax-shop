@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities
+@tailwind utilities;
+
+/* Colors: */
+/* 97D8DA Lighter Aqua */
+/* 008F95 Aqua*/
+/* 06444A Darker Aqua*/
+
+.landing {
+    background-image: url('https://th.bing.com/th/id/R.a0720f3d5b937cd9511cca7bcad66b3c?rik=1fK0QpW50eH3Wg&pid=ImgRaw&r=0');
+    background-size: cover;
+}
+
+@media (max-width: 930px) {
+    .menu-links {
+        display: none;
+    }
+    .dropdown-button {
+        display: flex !important;
+    }
+}

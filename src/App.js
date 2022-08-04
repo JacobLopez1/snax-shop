@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Landing from './components/Landing';
 
 function App() {
   return (
     <div className="app">
-      <h1 className='text-3xl font-bold underline'>
-        Hello
-      </h1>
+      <Header />
+      <Landing />
     </div>
   );
 }
