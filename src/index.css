@@ -41,6 +41,10 @@
     position: relative;
 }
 
+.product__img:hover .product__button {
+    opacity: 1;
+}
+
 @media (max-width: 930px) {
     .menu-links {
         display: none;
@@ -50,5 +54,23 @@
     }
     .deal {
         width: 50vw !important;
+    }
+    .product-wrapper {
+        width: calc(40vw);
+        height: calc(40vw);
+    }
+    .product__img {
+        width: 35vw;
+        height: 30vw;
+    }
+    .product__button {
+        right: 10vw;
+    }
+    .day-deals {
+        flex-wrap: wrap
+    }
+    .day-deal {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }
