@@ -4,6 +4,7 @@ import BestSelling from './components/BestSelling';
 import BrandLibrary from './components/BrandLibrary';
 import DayDeals from './components/DayDeals';
 import Deals from './components/Deals';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Highlights from './components/Highlights';
 import Landing from './components/Landing';
@@ -20,6 +21,7 @@ function App() {
       <DayDeals />
       <BestSelling />
       <BrandLibrary />
+      <Footer />
     </div>
   );
 }
