@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import BestSelling from './components/BestSelling';
+import BrandLibrary from './components/BrandLibrary';
 import DayDeals from './components/DayDeals';
 import Deals from './components/Deals';
 import Header from './components/Header';
@@ -16,6 +18,8 @@ function App() {
       <Deals />
       <Products />
       <DayDeals />
+      <BestSelling />
+      <BrandLibrary />
     </div>
   );
 }

@@ -73,4 +73,10 @@
         width: 100%;
         margin-bottom: 1rem;
     }
+    .best-selling-product {
+        width: 50%;
+    }
+    .carousel-wrapper {
+        width: 100%;
+    }
 }
