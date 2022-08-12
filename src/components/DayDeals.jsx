@@ -25,7 +25,7 @@ const DayDeals = () => {
           </div>
         </div>
         <div className="w-[50%] bg-slate-100 p-4 mx-4 flex justify-center relative day-deal">
-            <img classname="w-full" src="https://www.worldofsnacks.com/uploads/1/3/1/2/13127180/s643667121527569464_p355_i3_w1000.jpeg" />
+            <img className="w-full" src="https://www.worldofsnacks.com/uploads/1/3/1/2/13127180/s643667121527569464_p355_i3_w1000.jpeg" />
             <div className="absolute flex border-2 border-[#008F95] w-[80%] justify-between text-center mt-4">
                 <p className="flex flex-col w-full text-[#008F95] border-r-2 border-[#008F95] p-2"><span className="text-black">00</span>Days</p>
                 <p className="flex flex-col w-full text-[#008F95] border-r-2 border-[#008F95] p-2"><span className="text-black">00</span>Hours</p>
