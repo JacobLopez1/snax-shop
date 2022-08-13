@@ -4,7 +4,7 @@ import AddIcon from '@mui/icons-material/Add'
 
 const BestSellingProduct = ( {name, originalPrice, salePrice, url }) => {
     return (
-        <div className='w-[calc(100%/3)] flex p-4 best-selling-product'>
+        <div className='w-[calc(100%/3)] flex p-4 best-selling-cart'>
             <img src={url} className="w-[50%] brightness-90" />
             <div className="w-[50%] flex flex-col items-center justify-center px-2">
                 <p className='text-xs uppercase text-center'>{name}</p>

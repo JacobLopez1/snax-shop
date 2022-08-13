@@ -2,10 +2,18 @@ import React, { useEffect, useState } from "react";
 import { products } from "../data";
 import { ChevronLeft } from "@mui/icons-material";
 import { ChevronRight } from '@mui/icons-material';
+import { useDispatch } from "react-redux";
+import { addToCart, getCartItems } from '../app/cartSlice'
 
 const Products = () => {
   const [activeSet, setactiveSet] = useState(products);
   const [activeFilter, setactiveFilter] = useState("NONE");
+
+  const dispatch = useDispatch();
+
+  function addProductToCart(product) {
+    dispatch(addToCart(product));
+  }
 
   useEffect(() => {
     setactiveSet(products)
@@ -56,10 +64,10 @@ const Products = () => {
       <div className="flex flex-wrap w-full justify-center mt-10">
         {activeSet.map((product) => {
           return (
-            <div key={product.id} className="flex flex-col items-center w-[calc(100vw/4)] h-[calc(100vw/4)] m-3 product-wrapper">
+            <div key={product.id} className="flex flex-col items-center w-[calc(100vw/4)] h-[calc(100vw/4)] m-3 cart-wrapper">
               <div className="w-[calc(100vw/4)] h-[calc(100vw/5)] overflow-hidden relative product__img">
                 <img className="h-full w-full brightness-75" src={product.url} />
-                <button className="absolute top-4 right-[5vw] w-[15vw] p-2 z-10 uppercase bg-white hover:bg-black hover:text-white duration-300 product__button opacity-0">Add to Cart</button>
+                <button onClick={() => (addProductToCart(product))} className="absolute top-4 right-[5vw] w-[15vw] p-2 z-10 uppercase bg-white hover:bg-black hover:text-white duration-300 product__button opacity-0">Add to Cart</button>
               </div>
               <div className="text-center">
                 <h1 className="uppercase">{product.title}</h1>

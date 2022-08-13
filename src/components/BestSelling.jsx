@@ -7,7 +7,7 @@ const BestSelling = () => {
       <div className="flex flex-col items-center max-w-6xl mx-auto p-8">
         <h1 className="text-4xl">Best Selling</h1>
         <h2 className="uppercase text-[gray] py-4 text-sm tracking-widest">
-          Our most popular products of the week!
+          Our most popular cart of the week!
         </h2>
         <div className="flex flex-wrap my-10">
           <BestSellingProduct
