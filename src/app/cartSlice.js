@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   cart: [],
+  itemCount: 0,
 };
 
 export const cartSlice = createSlice({
-  name: 'products',
+  name: 'cartSlice',
   initialState,
 
   reducers: {
@@ -19,14 +20,15 @@ export const cartSlice = createSlice({
 
       return {
         ...state,
-        cart: inCart ? state.cart.map(item => item.id === action.payload.id ? {...item, qty: item.qty ? item.qty + 1 : 2} : item): [...state.cart, action.payload]
+        cart: inCart ? state.cart.map(item => item.id === action.payload.id ? {...item, qty: item.qty + 1} : item): [...state.cart, {...action.payload, qty: 1}],
+        itemCount: itemCount += 1,
       }
     },
     removeFromCart: (state, action) => {
       state.cart = state.cart.filter(item => item !== action.payload)
     },
     getCartItems: (state) => {
-      return state.cart
+      return cartSlice.cart
     },
   },
 });
